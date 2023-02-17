@@ -1,0 +1,10 @@
+CREATE TABLE store  (id INTEGER PRIMARY KEY, name TEXT, quanity INTEGER, price INTEGER, sold INTEGER);
+
+INSERT INTO store VALUES (1, "clothing",23, 6,7);
+INSERT INTO store VALUES (2, "bikes" ,10, 20,2);
+INSERT INTO store VALUES (3, "chips",25, 5, 4);
+INSERT INTO store VALUES (4,"beverages",40, 4,3);
+INSERT INTO store VALUES (5, "ice cream", 15,9, 1);
+SELECT * FROM store WHERE price <15 ORDER BY price;
+
+SELECT name, SUM(sold) FROM store GROUP BY sold 
